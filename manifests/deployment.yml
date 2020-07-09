@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: shikhadevopspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: shikhadevopspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: shikhadevopspipelinesjavascriptdocker 
+          image: mycontainerregistry121.azurecr.io/shikhadevopspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
